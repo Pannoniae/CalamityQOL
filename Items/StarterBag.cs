@@ -18,7 +18,6 @@ public class StarterBag : ModItem {
     public override bool CanRightClick() => true;
 
     public override void ModifyItemLoot(ItemLoot loot) {
-        loot.Add(ItemDropRule.Common(ItemID.Abeemination));
         loot.Add(ItemDropRule.Common(ItemID.CopperBow));
         loot.Add(ItemDropRule.Common(ItemID.CopperBroadsword));
         loot.Add(ItemDropRule.Common(ItemID.AmethystStaff));

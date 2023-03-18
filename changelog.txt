@@ -1,0 +1,1 @@
+- Fixed Starter Bag so it doesn't drop a Queen Bee Spawner.

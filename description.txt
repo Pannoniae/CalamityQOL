@@ -1,5 +1,5 @@
 (For 1.4.4)
-Adds some QoL changes from Calamity to vanilla.
+Adds some QoL changes from Calamity to vanilla. Feel free to suggest other QoL changes as well, not just Calamity ones! I am happy to implement them.
 
 It adds:
  - Town NPCs selling potions and materials like in Calamity
