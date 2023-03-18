@@ -1,0 +1,3 @@
+Adds some QoL changes from Calamity to vanilla.
+
+Currently it adds potions and other materials to the Town NPC shops.

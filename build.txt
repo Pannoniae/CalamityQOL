@@ -1,0 +1,4 @@
+displayName = Calamity QOL for Vanilla
+author = Pannoniae
+version = 0.1
+includeSource = true
