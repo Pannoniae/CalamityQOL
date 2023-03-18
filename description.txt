@@ -1,6 +1,12 @@
 (For 1.4.4)
 Adds some QoL changes from Calamity to vanilla.
 
-Currently it adds potions and other materials to the Town NPC shops.
+It adds:
+ - Town NPCs selling potions and materials like in Calamity
+ - Reducing respawn timer to 3 seconds if no boss is alive
+ - Starter Bag (only with vanilla items)
+ - Removing the Expert Mode regeneration penalty.
+ 
+All features are toggleable in the config.
 
 GitHub repository to see the spaghetti: https://github.com/Pannoniae/CalamityQOL

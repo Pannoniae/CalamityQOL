@@ -1,7 +1,25 @@
 # This file will automatically update with entries for new content after a build and reload
 Mods: {
 	CalamityQOL: {
-		Config.sellAdditionalItems: Town NPCs Sell Additional Items
-		ConfigTooltip.sellAdditionalItems: If enabled, Town NPCs sell potions, various materials and other things intended to reduce grinding.
+		Config: {
+			sellAdditionalItems: Town NPCs Sell Additional Items
+			wellFedPatch: Restore Life Regeneration in Expert Mode
+			respawnTimer: Reduce Respawn Timer
+			starterBag: Starter Bag
+		}
+
+		ConfigTooltip: {
+			sellAdditionalItems: If enabled, Town NPCs sell potions, various materials and other things intended to reduce grinding.
+			wellFedPatch: In Expert Mode, the Well Fed buff is required for full health regeneration. Should this be turned off?
+			respawnTimer: If enabled, the respawn timer is reduced to 6 seconds if no boss is alive and further down to 3 seconds if in addition, no event is alive.
+			starterBag: If enabled, gives players some starting items.
+		}
+
+		Items: {
+			StarterBag: {
+				DisplayName: Starter Bag
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+		}
 	}
 }
