@@ -1,1 +1,1 @@
- - Fix localisation
+ - Made boss summons non-consumable

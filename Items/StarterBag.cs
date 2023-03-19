@@ -12,7 +12,7 @@ public class StarterBag : ModItem {
         Item.consumable = true;
         Item.width = 24;
         Item.height = 24;
-        Item.rare = 1;
+        Item.rare = ItemRarityID.Blue;
     }
 
     public override bool CanRightClick() => true;

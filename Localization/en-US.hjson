@@ -9,6 +9,7 @@ Mods: {
 			accessoryRecipes: "[i:212] Accessory Recipes"
 			fasterPlacement: "[i:94] Faster Block Placement"
 			townNPCsAtNight: "[i:4951] Spawn Town NPCs at Night"
+			nonConsumableSummons: "[i:43] Non-consumable Summons"
 		}
 
 		ConfigTooltip: {
@@ -19,6 +20,7 @@ Mods: {
 			accessoryRecipes: If enabled, makes early-game accessories craftable like in Calamity.
 			fasterPlacement: If enabled, uses Calamity's faster tile placement code.
 			townNPCsAtNight: If enabled, Town NPCs can also spawn at night.
+			nonConsumableSummons: If enabled, makes boss summoning items non-consumable. (reusable)
 		}
 
 		Items: {

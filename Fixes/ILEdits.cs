@@ -1,6 +1,4 @@
-﻿using System;
-using CalamityQOL.Config;
-using Mono.Cecil;
+﻿using CalamityQOL.Config;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using Terraria;
@@ -19,7 +17,7 @@ public class ILEdits : ModSystem {
             CalamityQOLMod.i.Logger.Warn("Failed to locate Well Fed");
         }
     }
-    
+
     //IL_0684: stloc.1      // start
     //IL_0685: ldsfld       bool Terraria.Main::dayTime
     //IL_068a: brtrue       IL_0975
@@ -29,7 +27,6 @@ public class ILEdits : ModSystem {
         // so after the !Main.daytime check, we call UpdateTime_SpawnTownNPCs() anyway
         var ilCursor = new ILCursor(il);
         if (ilCursor.TryGotoNext(MoveType.After, i => i.MatchStsfld<Main>("eclipse"))) {
-
             // call         void Terraria.Main::UpdateTime_SpawnTownNPCs()
             ilCursor.Emit<Main>(OpCodes.Call, "UpdateTime_SpawnTownNPCs");
         }

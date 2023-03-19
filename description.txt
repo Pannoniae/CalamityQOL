@@ -9,6 +9,7 @@ It adds:
  - Recipes for early-game accessories.
  - Faster tile placement
  - Town NPC spawning at night
+ - Boss summons non-consumable
 All features are toggleable in the config.
 
 Talk to me, I'm lonely: https://discord.gg/wcqwNPpFqP
