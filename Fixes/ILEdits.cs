@@ -51,6 +51,6 @@ public class ILEdits : ModSystem {
 
     public static void unload() {
         IL_Player.UpdateLifeRegen -= wellFedPatch;
-        IL_Player.UpdateTime -= townNPCPatch;
+        IL_Main.UpdateTime -= townNPCPatch;
     }
 }
