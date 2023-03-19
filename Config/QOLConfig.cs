@@ -41,16 +41,18 @@ public class QOLConfig : ModConfig {
     [Tooltip("$Mods.CalamityQOL.ConfigTooltip.accessoryRecipes")]
     public bool accessoryRecipes { get; set; }
     
-    [Label("$Mods.CalamityQOL.Config.EntryTitle.fasterPlacement")]
+    // Wooden Platform
+    [Label("$Mods.CalamityQOL.Config.fasterPlacement")]
     [BackgroundColor(192, 54, 64, 192)]
     [DefaultValue(true)]
-    [Tooltip("$Mods.CalamityQOL.Config.EntryTooltip.fasterPlacement")]
+    [Tooltip("$Mods.CalamityQOL.ConfigTooltip.fasterPlacement")]
     public bool fasterPlacement { get; set; }
     
-    [Label("$Mods.CalamityQOL.Config.EntryTitle.townNPCsAtNight")]
+    // Universal Pylon
+    [Label("$Mods.CalamityQOL.Config.townNPCsAtNight")]
     [BackgroundColor(192, 54, 64, 192)]
     [DefaultValue(true)]
-    [Tooltip("$Mods.CalamityQOL.Config.EntryTooltip.townNPCsAtNight")]
+    [Tooltip("$Mods.CalamityQOL.ConfigTooltip.townNPCsAtNight")]
     public bool townNPCsAtNight { get; set; }
 
 
