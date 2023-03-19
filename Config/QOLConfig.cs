@@ -43,14 +43,14 @@ public class QOLConfig : ModConfig {
     
     // Wooden Platform
     [Label("$Mods.CalamityQOL.Config.fasterPlacement")]
-    [BackgroundColor(192, 54, 64, 192)]
+    [BackgroundColor(192, 54, 128, 192)]
     [DefaultValue(true)]
     [Tooltip("$Mods.CalamityQOL.ConfigTooltip.fasterPlacement")]
     public bool fasterPlacement { get; set; }
     
     // Universal Pylon
     [Label("$Mods.CalamityQOL.Config.townNPCsAtNight")]
-    [BackgroundColor(192, 54, 64, 192)]
+    [BackgroundColor(192, 54, 128, 192)]
     [DefaultValue(true)]
     [Tooltip("$Mods.CalamityQOL.ConfigTooltip.townNPCsAtNight")]
     public bool townNPCsAtNight { get; set; }
