@@ -10,12 +10,12 @@ namespace CalamityQOL.Fixes;
 public class ILEdits : ModSystem {
     private static void wellFedPatch(ILContext il) {
         var ilCursor = new ILCursor(il);
-        if (!ilCursor.TryGotoNext(MoveType.After, i => i.MatchLdfld<Player>("wellFed"))) {
-            Console.Out.WriteLine("Failed to locate Well Fed");
-        }
-        else {
+        if (ilCursor.TryGotoNext(MoveType.After, i => i.MatchLdfld<Player>("wellFed"))) {
             ilCursor.Emit(OpCodes.Ldc_I4_1);
             ilCursor.Emit(OpCodes.Or);
+        }
+        else {
+            Console.Out.WriteLine("Failed to locate Well Fed");
         }
     }
 
