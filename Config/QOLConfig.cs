@@ -40,6 +40,18 @@ public class QOLConfig : ModConfig {
     [DefaultValue(true)]
     [Tooltip("$Mods.CalamityQOL.ConfigTooltip.accessoryRecipes")]
     public bool accessoryRecipes { get; set; }
+    
+    [Label("$Mods.CalamityQOL.Config.EntryTitle.fasterPlacement")]
+    [BackgroundColor(192, 54, 64, 192)]
+    [DefaultValue(true)]
+    [Tooltip("$Mods.CalamityQOL.Config.EntryTooltip.fasterPlacement")]
+    public bool fasterPlacement { get; set; }
+    
+    [Label("$Mods.CalamityQOL.Config.EntryTitle.townNPCsAtNight")]
+    [BackgroundColor(192, 54, 64, 192)]
+    [DefaultValue(true)]
+    [Tooltip("$Mods.CalamityQOL.Config.EntryTooltip.townNPCsAtNight")]
+    public bool townNPCsAtNight { get; set; }
 
 
     public override ConfigScope Mode => ConfigScope.ServerSide;

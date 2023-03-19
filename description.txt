@@ -1,5 +1,5 @@
 (For 1.4.4)
-Adds some QoL changes from Calamity to vanilla. Feel free to suggest other QoL changes as well, not just Calamity ones! I am happy to implement them.
+Adds some quality of life changes from Calamity to vanilla. Feel free to suggest other quality of life changes as well, not just Calamity ones! I am happy to implement them.
 
 It adds:
  - Town NPCs selling potions and materials like in Calamity
@@ -7,6 +7,8 @@ It adds:
  - Starter Bag (only with vanilla items)
  - Removing the Expert Mode regeneration penalty.
  - Recipes for early-game accessories.
+ - Faster tile placement
+ - Town NPC spawning at night
 All features are toggleable in the config.
 
 Talk to me, I'm lonely: https://discord.gg/wcqwNPpFqP

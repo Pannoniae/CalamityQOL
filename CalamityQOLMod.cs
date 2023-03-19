@@ -3,8 +3,11 @@ using Terraria.ModLoader;
 
 namespace CalamityQOL; 
 
-public class CalamityQOL : Mod {
+public class CalamityQOLMod : Mod {
+
+    public static CalamityQOLMod i;
     public override void Load() {
+        i = this;
         ILEdits.load();
     }
 

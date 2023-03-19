@@ -1,2 +1,3 @@
-- Added Calamity accessory recipes.
-- Added shiny icons for the config.
+ - Added faster tile placement
+ - Added Town NPC spawning at night
+ - Implement proper logging

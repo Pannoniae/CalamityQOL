@@ -7,6 +7,8 @@ Mods: {
 			respawnTimer: "[i:1133] Reduce Respawn Timer"
 			starterBag: "[i:4131] Starter Bag"
 			accessoryRecipes: "[i:212] Accessory Recipes"
+			fasterPlacement: "[i:94] Faster Block Placement"
+			townNPCsAtNight: "[i:4951] Spawn Town NPCs at Night"
 		}
 
 		ConfigTooltip: {
@@ -15,6 +17,8 @@ Mods: {
 			respawnTimer: If enabled, the respawn timer is reduced to 6 seconds if no boss is alive and further down to 3 seconds if in addition, no event is alive.
 			starterBag: If enabled, gives players some starting items.
 			accessoryRecipes: If enabled, makes early-game accessories craftable like in Calamity.
+			fasterPlacement: If enabled, uses Calamity's faster tile placement code.
+			townNPCsAtNight: If enabled, Town NPCs can also spawn at night.
 		}
 
 		Items: {

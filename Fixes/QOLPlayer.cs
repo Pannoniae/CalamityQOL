@@ -13,6 +13,7 @@ public class QOLPlayer : ModPlayer {
         if (!QOLConfig.Instance.respawnTimer) {
             return;
         }
+
         if (isAnyBossAlive()) {
             return;
         }
@@ -22,13 +23,19 @@ public class QOLPlayer : ModPlayer {
             Player.respawnTimer = respawnTimer;
         }
     }
-    
-    public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
-    {
+
+    public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath) {
         if (QOLConfig.Instance.starterBag) {
             var obj = new Item();
             obj.SetDefaults(ModContent.ItemType<StarterBag>());
             yield return obj;
+        }
+    }
+
+    public override void UpdateEquips() {
+        if (QOLConfig.Instance.fasterPlacement) {
+            Player.tileSpeed += 0.5f;
+            Player.wallSpeed += 0.5f;
         }
     }
 
