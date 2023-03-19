@@ -6,7 +6,8 @@ It adds:
  - Reducing respawn timer to 3 seconds if no boss is alive
  - Starter Bag (only with vanilla items)
  - Removing the Expert Mode regeneration penalty.
- 
+ - Recipes for early-game accessories.
 All features are toggleable in the config.
 
+Talk to me, I'm lonely: https://discord.gg/wcqwNPpFqP
 GitHub repository to see the spaghetti: https://github.com/Pannoniae/CalamityQOL

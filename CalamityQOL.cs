@@ -1,5 +1,4 @@
 using CalamityQOL.Fixes;
-using Terraria;
 using Terraria.ModLoader;
 
 namespace CalamityQOL {

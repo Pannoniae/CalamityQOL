@@ -2,10 +2,11 @@
 Mods: {
 	CalamityQOL: {
 		Config: {
-			sellAdditionalItems: Town NPCs Sell Additional Items
-			wellFedPatch: Restore Life Regeneration in Expert Mode
-			respawnTimer: Reduce Respawn Timer
-			starterBag: Starter Bag
+			sellAdditionalItems: "[i:73] Town NPCs Sell Additional Items"
+			wellFedPatch: "[i:4032] Restore Life Regeneration in Expert Mode"
+			respawnTimer: "[i:1133] Reduce Respawn Timer"
+			starterBag: "[i:4131] Starter Bag"
+			accessoryRecipes: "[i:212] Accessory Recipes"
 		}
 
 		ConfigTooltip: {
@@ -13,6 +14,7 @@ Mods: {
 			wellFedPatch: In Expert Mode, the Well Fed buff is required for full health regeneration. Should this be turned off?
 			respawnTimer: If enabled, the respawn timer is reduced to 6 seconds if no boss is alive and further down to 3 seconds if in addition, no event is alive.
 			starterBag: If enabled, gives players some starting items.
+			accessoryRecipes: If enabled, makes early-game accessories craftable like in Calamity.
 		}
 
 		Items: {

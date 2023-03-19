@@ -8,7 +8,7 @@ public class QOLConfig : ModConfig {
     
     // ReSharper disable once UnusedMember.Global
     public static QOLConfig Instance;
-
+    
     [Label("$Mods.CalamityQOL.Config.sellAdditionalItems")]
     [BackgroundColor(192, 64, 128, 192)]
     [DefaultValue(true)]
@@ -21,17 +21,26 @@ public class QOLConfig : ModConfig {
     [Tooltip("$Mods.CalamityQOL.ConfigTooltip.wellFedPatch")]
     public bool wellFedPatch { get; set; }
 
+    // Abeemination
     [Label("$Mods.CalamityQOL.Config.respawnTimer")]
     [BackgroundColor(192, 64, 128, 192)]
     [DefaultValue(true)]
     [Tooltip("$Mods.CalamityQOL.ConfigTooltip.respawnTimer")]
     public bool respawnTimer { get; set; }
     
+    // Void Bag
     [Label("$Mods.CalamityQOL.Config.starterBag")]
     [BackgroundColor(192, 64, 128, 192)]
     [DefaultValue(true)]
     [Tooltip("$Mods.CalamityQOL.ConfigTooltip.starterBag")]
     public bool starterBag { get; set; }
+    
+    // Anklet of the Wind
+    [Label("$Mods.CalamityQOL.Config.accessoryRecipes")]
+    [BackgroundColor(192, 64, 128, 192)]
+    [DefaultValue(true)]
+    [Tooltip("$Mods.CalamityQOL.ConfigTooltip.accessoryRecipes")]
+    public bool accessoryRecipes { get; set; }
 
 
 
