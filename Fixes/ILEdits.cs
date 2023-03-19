@@ -26,7 +26,6 @@ public class ILEdits : ModSystem {
     //IL_068f: ldc.i4.0
     //IL_0690: stsfld       bool Terraria.Main::eclipse
     private static void townNPCPatch(ILContext il) {
-
         // so after the !Main.daytime check, we call UpdateTime_SpawnTownNPCs() anyway
         var ilCursor = new ILCursor(il);
         if (ilCursor.TryGotoNext(MoveType.After, i => i.MatchStsfld<Main>("eclipse"))) {
