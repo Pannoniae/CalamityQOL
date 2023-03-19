@@ -20,22 +20,22 @@ public class ILEdits : ModSystem {
         }
     }
     
-    
+    //IL_0684: stloc.1      // start
     //IL_0685: ldsfld       bool Terraria.Main::dayTime
     //IL_068a: brtrue       IL_0975
+    //IL_068f: ldc.i4.0
+    //IL_0690: stsfld       bool Terraria.Main::eclipse
     private static void townNPCPatch(ILContext il) {
 
         // so after the !Main.daytime check, we call UpdateTime_SpawnTownNPCs() anyway
         var ilCursor = new ILCursor(il);
-        if (ilCursor.TryGotoNext(MoveType.After, i => i.MatchLdsfld<Main>("dayTime"))) {
-            // skip brtrue
-            ilCursor.Index += 1;
-            
+        if (ilCursor.TryGotoNext(MoveType.After, i => i.MatchStsfld<Main>("eclipse"))) {
+
             // call         void Terraria.Main::UpdateTime_SpawnTownNPCs()
             ilCursor.Emit<Main>(OpCodes.Call, "UpdateTime_SpawnTownNPCs");
         }
         else {
-            CalamityQOLMod.i.Logger.Warn("Failed to locate daytime check");
+            CalamityQOLMod.i.Logger.Warn("Failed to locate daytime check (Main.eclipse)");
         }
     }
 
