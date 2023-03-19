@@ -203,6 +203,6 @@ public class NPCShop : GlobalNPC {
             shop.item[nextSlot].shopCustomPrice = price;
         }
 
-        ++nextSlot;
+        nextSlot++;
     }
 }
