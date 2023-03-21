@@ -1,1 +1,1 @@
- - Made boss summons non-consumable
+ - Added universal AutoSwing

@@ -10,6 +10,7 @@ Mods: {
 			fasterPlacement: "[i:94] Faster Block Placement"
 			townNPCsAtNight: "[i:4951] Spawn Town NPCs at Night"
 			nonConsumableSummons: "[i:43] Non-consumable Summons"
+			moreAutoSwing: "[i:211] More AutoSwing"
 		}
 
 		ConfigTooltip: {
@@ -21,6 +22,7 @@ Mods: {
 			fasterPlacement: If enabled, uses Calamity's faster tile placement code.
 			townNPCsAtNight: If enabled, Town NPCs can also spawn at night.
 			nonConsumableSummons: If enabled, makes boss summoning items non-consumable. (reusable)
+			moreAutoSwing: If enabled, gives more weapons the AutoSwing capability.
 		}
 
 		Items: {

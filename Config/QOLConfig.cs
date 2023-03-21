@@ -61,6 +61,13 @@ public class QOLConfig : ModConfig {
     [DefaultValue(true)]
     [Tooltip("$Mods.CalamityQOL.ConfigTooltip.nonConsumableSummons")]
     public bool nonConsumableSummons { get; set; }
+    
+    // Feral Claws
+    [Label("$Mods.CalamityQOL.Config.moreAutoSwing")]
+    [BackgroundColor(192, 54, 128, 192)]
+    [DefaultValue(true)]
+    [Tooltip("$Mods.CalamityQOL.ConfigTooltip.moreAutoSwing")]
+    public bool moreAutoSwing { get; set; }
 
 
     public override ConfigScope Mode => ConfigScope.ServerSide;
