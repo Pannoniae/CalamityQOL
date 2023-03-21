@@ -1,2 +1,2 @@
-- Added Copper/Tin switch to Starter Bag
-- Added Abigail's Flower to Starter Bag
+- Added buff slots increase
+- Fixed Starter Bag config icon

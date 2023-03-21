@@ -5,12 +5,13 @@ Mods: {
 			sellAdditionalItems: "[i:73] Town NPCs Sell Additional Items"
 			wellFedPatch: "[i:4032] Restore Life Regeneration in Expert Mode"
 			respawnTimer: "[i:1133] Reduce Respawn Timer"
-			starterBag: "[i:4131] Starter Bag"
+			starterBag: "[i:CalamityQOL/StarterBag] Starter Bag"
 			accessoryRecipes: "[i:212] Accessory Recipes"
 			fasterPlacement: "[i:94] Faster Block Placement"
 			townNPCsAtNight: "[i:4951] Spawn Town NPCs at Night"
 			nonConsumableSummons: "[i:43] Non-consumable Summons"
 			moreAutoSwing: "[i:211] More AutoSwing"
+			moreBuffSlots: "[i:292] More Buff Slots"
 		}
 
 		ConfigTooltip: {
@@ -23,6 +24,7 @@ Mods: {
 			townNPCsAtNight: If enabled, Town NPCs can also spawn at night.
 			nonConsumableSummons: If enabled, makes boss summoning items non-consumable. (reusable)
 			moreAutoSwing: If enabled, gives more weapons the AutoSwing capability.
+			moreBuffSlots: Increases the number of buff slots by the value. Set to 0 to disable.
 		}
 
 		Items: {

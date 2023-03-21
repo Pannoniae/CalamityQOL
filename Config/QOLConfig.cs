@@ -68,7 +68,14 @@ public class QOLConfig : ModConfig {
     [DefaultValue(true)]
     [Tooltip("$Mods.CalamityQOL.ConfigTooltip.moreAutoSwing")]
     public bool moreAutoSwing { get; set; }
-
+    
+    // Ironskin Potion
+    [Label("$Mods.CalamityQOL.Config.moreBuffSlots")]
+    [BackgroundColor(192, 54, 128, 192)]
+    [DefaultValue(44)]
+    [Range(0, 936)]
+    [Tooltip("$Mods.CalamityQOL.ConfigTooltip.moreBuffSlots")]
+    public int moreBuffSlots { get; set; }
 
     public override ConfigScope Mode => ConfigScope.ServerSide;
 }
