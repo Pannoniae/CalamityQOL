@@ -7,11 +7,13 @@ Mods: {
 			respawnTimer: "[i:1133] Reduce Respawn Timer"
 			starterBag: "[i:CalamityQOL/StarterBag] Starter Bag"
 			accessoryRecipes: "[i:212] Accessory Recipes"
-			fasterPlacement: "[i:94] Faster Block Placement"
 			townNPCsAtNight: "[i:4951] Spawn Town NPCs at Night"
 			nonConsumableSummons: "[i:43] Non-consumable Summons"
 			moreAutoSwing: "[i:211] More AutoSwing"
 			moreBuffSlots: "[i:292] More Buff Slots"
+			fasterPlacement: "[i:94] Faster Block Placement"
+			fasterJumpSpeed: "[i:2423] Faster Jump Speed"
+			fasterSpeed: "[i:54] Faster Movement Speed"
 		}
 
 		ConfigTooltip: {
@@ -20,12 +22,16 @@ Mods: {
 			respawnTimer: If enabled, the respawn timer is reduced to 6 seconds if no boss is alive and further down to 3 seconds if in addition, no event is alive.
 			starterBag: If enabled, gives players some starting items.
 			accessoryRecipes: If enabled, makes early-game accessories craftable like in Calamity.
-			fasterPlacement: If enabled, uses Calamity's faster tile placement code.
 			townNPCsAtNight: If enabled, Town NPCs can also spawn at night.
 			nonConsumableSummons: If enabled, makes boss summoning items non-consumable. (reusable)
 			moreAutoSwing: If enabled, gives more weapons the AutoSwing capability.
 			moreBuffSlots: Increases the number of buff slots by the value. Set to 0 to disable.
+			fasterPlacement: If enabled, makes tile placement way faster.
+			fasterJumpSpeed: If enabled, makes the player's jump speed faster.
+			fasterSpeed: If enabled, makes the player's base movement speed faster.
 		}
+
+		ConfigHeaders.buffs: Base Stat Boosts
 
 		Items: {
 			StarterBag: {

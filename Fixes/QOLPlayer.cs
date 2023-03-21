@@ -39,6 +39,16 @@ public class QOLPlayer : ModPlayer {
         }
     }
 
+    public override void PostUpdateMiscEffects() {
+        if (QOLConfig.Instance.fasterSpeed) {
+            Player.moveSpeed += 0.5f;
+        }
+
+        if (QOLConfig.Instance.fasterJumpSpeed) {
+            Player.jumpSpeedBoost += 0.2f;
+        }
+    }
+
     public static bool isEvent(Player player) {
         return Main.invasionType > 0 && Main.invasionProgressNearInvasion || player.ZoneTowerStardust ||
                player.ZoneTowerSolar || player.ZoneTowerVortex || player.ZoneTowerNebula ||

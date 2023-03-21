@@ -1,2 +1,2 @@
-- Added buff slots increase
-- Fixed Starter Bag config icon
+ - Separated config into sections
+ - Added stat boosts for jump speed, base movement speed and tile placement speed.

@@ -7,7 +7,7 @@ It adds:
  - Starter Bag (only with vanilla items)
  - Removing the Expert Mode regeneration penalty.
  - Recipes for early-game accessories.
- - Faster tile placement
+ - Faster tile placement, movement speed and jump speed
  - Town NPC spawning at night
  - Boss summons non-consumable
  - Increased number of buff slots! (configurable)

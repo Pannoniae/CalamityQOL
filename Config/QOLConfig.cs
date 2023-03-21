@@ -3,10 +3,13 @@ using Terraria.ModLoader.Config;
 
 namespace CalamityQOL.Config;
 
+[BackgroundColor(32, 2, 8, 4)]
 public class QOLConfig : ModConfig {
     // magic tModLoader-managed field, assigned
     // ReSharper disable once UnusedMember.Global
     public static QOLConfig Instance;
+    
+    
 
     [Label("$Mods.CalamityQOL.Config.sellAdditionalItems")]
     [BackgroundColor(192, 64, 128, 192)]
@@ -40,14 +43,7 @@ public class QOLConfig : ModConfig {
     [DefaultValue(true)]
     [Tooltip("$Mods.CalamityQOL.ConfigTooltip.accessoryRecipes")]
     public bool accessoryRecipes { get; set; }
-    
-    // Wooden Platform
-    [Label("$Mods.CalamityQOL.Config.fasterPlacement")]
-    [BackgroundColor(192, 54, 128, 192)]
-    [DefaultValue(true)]
-    [Tooltip("$Mods.CalamityQOL.ConfigTooltip.fasterPlacement")]
-    public bool fasterPlacement { get; set; }
-    
+
     // Universal Pylon
     [Label("$Mods.CalamityQOL.Config.townNPCsAtNight")]
     [BackgroundColor(192, 54, 128, 192)]
@@ -76,6 +72,28 @@ public class QOLConfig : ModConfig {
     [Range(0, 936)]
     [Tooltip("$Mods.CalamityQOL.ConfigTooltip.moreBuffSlots")]
     public int moreBuffSlots { get; set; }
+    
+    [Header("$Mods.CalamityQOL.ConfigHeaders.buffs")]
+    // Wooden Platform
+    [Label("$Mods.CalamityQOL.Config.fasterPlacement")]
+    [BackgroundColor(192, 54, 128, 192)]
+    [DefaultValue(true)]
+    [Tooltip("$Mods.CalamityQOL.ConfigTooltip.fasterPlacement")]
+    public bool fasterPlacement { get; set; }
+    
+    // Wooden Platform
+    [Label("$Mods.CalamityQOL.Config.fasterJumpSpeed")]
+    [BackgroundColor(192, 54, 128, 192)]
+    [DefaultValue(true)]
+    [Tooltip("$Mods.CalamityQOL.ConfigTooltip.fasterJumpSpeed")]
+    public bool fasterJumpSpeed { get; set; }
+
+    // Wooden Platform
+    [Label("$Mods.CalamityQOL.Config.fasterSpeed")]
+    [BackgroundColor(192, 54, 128, 192)]
+    [DefaultValue(false)]
+    [Tooltip("$Mods.CalamityQOL.ConfigTooltip.fasterSpeed")]
+    public bool fasterSpeed { get; set; }
 
     public override ConfigScope Mode => ConfigScope.ServerSide;
 }
