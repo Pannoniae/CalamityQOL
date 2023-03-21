@@ -10,6 +10,7 @@ It adds:
  - Faster tile placement
  - Town NPC spawning at night
  - Boss summons non-consumable
+ - Increased number of buff slots! (configurable)
 All features are toggleable in the config.
 
 Talk to me, I'm lonely: https://discord.gg/wcqwNPpFqP
