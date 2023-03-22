@@ -58,7 +58,7 @@ public class QOLPlayer : ModPlayer {
     }
 
 
-    public static bool isAnyBossAlive(bool checkForMechs = false) {
+    public static bool isAnyBossAlive() {
         return Main.npc.Any(n => n != null && n.active && n.boss);
     }
 }
