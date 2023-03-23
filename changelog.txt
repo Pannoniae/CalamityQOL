@@ -1,2 +1,1 @@
- - Separated config into sections
- - Added stat boosts for jump speed, base movement speed and tile placement speed.
+- Fix the mod not *fully* unloading upon unloading. Saved you 24 bytes per unload :)

@@ -8,8 +8,12 @@ namespace CalamityQOL.Fixes;
 
 public class ILEdits : ModSystem {
     private static void wellFedPatch(ILContext il) {
+        int bullshitVariable;
         var ilCursor = new ILCursor(il);
-        if (ilCursor.TryGotoNext(MoveType.After, i => i.MatchLdfld<Player>("wellFed"))) {
+        if (ilCursor.TryGotoNext(MoveType.After, i => {
+                bullshitVariable = 0;
+                return i.MatchLdfld<Player>("wellFed");
+            })) {
             ilCursor.Emit(OpCodes.Ldc_I4_1);
             ilCursor.Emit(OpCodes.Or);
         }
@@ -25,8 +29,12 @@ public class ILEdits : ModSystem {
     //IL_0690: stsfld       bool Terraria.Main::eclipse
     private static void townNPCPatch(ILContext il) {
         // so after the !Main.daytime check, we call UpdateTime_SpawnTownNPCs() anyway
+        int bullshitVariable;
         var ilCursor = new ILCursor(il);
-        if (ilCursor.TryGotoNext(MoveType.After, i => i.MatchStsfld<Main>("eclipse"))) {
+        if (ilCursor.TryGotoNext(MoveType.After, i => {
+                bullshitVariable = 0;
+                return i.MatchStsfld<Main>("eclipse");
+            })) {
             // call         void Terraria.Main::UpdateTime_SpawnTownNPCs()
             ilCursor.Emit<Main>(OpCodes.Call, "UpdateTime_SpawnTownNPCs");
         }

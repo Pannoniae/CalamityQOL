@@ -14,19 +14,34 @@ public class RecipeChanges : ModSystem {
     private int anyIceBlock;
 
     public override void AddRecipeGroups() {
+        // Sorry, this is needed so the compiler doesn't create a static class from the lambdas
+        // which then never gets unloaded.
+        int bullshitVariable;
         anyCopperBar = RecipeGroup.RegisterGroup("AnyCopperBar",
             new RecipeGroup(
-                () => Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.CopperBar),
+                () => {
+                    bullshitVariable = 0;
+                    return Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.CopperBar);
+                },
                 ItemID.CopperBar, ItemID.TinBar));
         anySilverBar = RecipeGroup.RegisterGroup("AnySilverBar",
             new RecipeGroup(
-                () => Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.SilverBar),
+                () => {
+                    bullshitVariable = 0;
+                    return Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.SilverBar);
+                },
                 ItemID.SilverBar, ItemID.TungstenBar));
         anyGoldBar = RecipeGroup.RegisterGroup("AnyGoldBar",
-            new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.GoldBar),
+            new RecipeGroup(() => {
+                    bullshitVariable = 0;
+                    return Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.GoldBar);
+                },
                 ItemID.GoldBar, ItemID.PlatinumBar));
         anyIceBlock = RecipeGroup.RegisterGroup("AnyIceBlock",
-            new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.IceBlock),
+            new RecipeGroup(() => {
+                    bullshitVariable = 0;
+                    return Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.IceBlock);
+                },
                 ItemID.IceBlock, ItemID.PurpleIceBlock,
                 ItemID.PinkIceBlock, ItemID.RedIceBlock));
     }

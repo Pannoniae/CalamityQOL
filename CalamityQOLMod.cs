@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 namespace CalamityQOL;
 
 public class CalamityQOLMod : Mod {
+
     public static CalamityQOLMod i;
 
     public override uint ExtraPlayerBuffSlots =>
