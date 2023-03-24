@@ -45,16 +45,16 @@ public class ILEdits : ModSystem {
 
     public static void load() {
         if (QOLConfig.Instance.wellFedPatch) {
-            IL_Player.UpdateLifeRegen += wellFedPatch;
+            IL.Terraria.Player.UpdateLifeRegen += wellFedPatch;
         }
 
         if (QOLConfig.Instance.townNPCsAtNight) {
-            IL_Main.UpdateTime += townNPCPatch;
+            IL.Terraria.Main.UpdateTime += townNPCPatch;
         }
     }
 
     public static void unload() {
-        IL_Player.UpdateLifeRegen -= wellFedPatch;
-        IL_Main.UpdateTime -= townNPCPatch;
+        IL.Terraria.Player.UpdateLifeRegen -= wellFedPatch;
+        IL.Terraria.Main.UpdateTime -= townNPCPatch;
     }
 }
