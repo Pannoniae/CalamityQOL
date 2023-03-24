@@ -434,7 +434,10 @@ $RECYCLE.BIN/
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
-.idea/**/*sonarlint*
+*sonarlint*
+*sonarlint*/
+/sonarlint/
+*/sonarlint/
 
 # AWS User-specific
 .idea/**/aws.xml

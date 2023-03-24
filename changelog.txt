@@ -1,1 +1,1 @@
-- Fix the mod not *fully* unloading upon unloading. Saved you 24 bytes per unload :)
+- Added more recipes from Calamity.
