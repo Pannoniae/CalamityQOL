@@ -1,1 +1,1 @@
-- Fix NPC shops (potion selling).
+- Fix NPC shops (potion selling) for the declarative shop system.
