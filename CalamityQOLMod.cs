@@ -18,6 +18,6 @@ public class CalamityQOLMod : Mod {
 
     public override void Unload() {
         ILEdits.unload();
-        i = null;
+        i = null!;
     }
 }

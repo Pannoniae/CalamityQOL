@@ -1,1 +1,1 @@
-- Added more recipes from Calamity.
+- Fix NPC shops (potion selling).
