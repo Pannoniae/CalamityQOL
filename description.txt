@@ -1,4 +1,4 @@
-(For 1.4.4)
+(For 1.4.4 preview and 1.4.3.6)
 Adds some quality of life changes from Calamity to vanilla. Feel free to suggest other quality of life changes as well, not just Calamity ones! I am happy to implement them.
 
 It adds:

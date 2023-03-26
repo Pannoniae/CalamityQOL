@@ -6,7 +6,7 @@ Mods: {
 			wellFedPatch: "[i:4032] Restore Life Regeneration in Expert Mode"
 			respawnTimer: "[i:1133] Reduce Respawn Timer"
 			starterBag: "[i:CalamityQOL/StarterBag] Starter Bag"
-			accessoryRecipes: "[i:212] Accessory Recipes"
+			accessoryRecipes: "[i:212] Additional Recipes"
 			townNPCsAtNight: "[i:4951] Spawn Town NPCs at Night"
 			nonConsumableSummons: "[i:43] Non-consumable Summons"
 			moreAutoSwing: "[i:211] More AutoSwing"
@@ -14,14 +14,16 @@ Mods: {
 			fasterPlacement: "[i:94] Faster Block Placement"
 			fasterJumpSpeed: "[i:2423] Faster Jump Speed"
 			fasterSpeed: "[i:54] Faster Movement Speed"
+			fasterFalling: "[i:158] Faster Falling"
+			recipeBrowser: "[i:716] Merchant Has Recipe Browser"
 		}
 
 		ConfigTooltip: {
 			sellAdditionalItems: If enabled, Town NPCs sell potions, various materials and other things intended to reduce grinding.
 			wellFedPatch: In Expert Mode, the Well Fed buff is required for full health regeneration. Should this be turned off?
-			respawnTimer: If enabled, the respawn timer is reduced to 6 seconds if no boss is alive and further down to 3 seconds if in addition, no event is alive.
+			respawnTimer: If enabled, the respawn timer is reduced to 6 seconds if no boss is alive and further down to 3 seconds if no event is ongoing.
 			starterBag: If enabled, gives players some starting items.
-			accessoryRecipes: If enabled, makes early-game accessories craftable like in Calamity.
+			accessoryRecipes: If enabled, makes certain accessories, weapons and materials craftable like in Calamity.
 			townNPCsAtNight: If enabled, Town NPCs can also spawn at night.
 			nonConsumableSummons: If enabled, makes boss summoning items non-consumable. (reusable)
 			moreAutoSwing: If enabled, gives more weapons the AutoSwing capability.
@@ -29,9 +31,15 @@ Mods: {
 			fasterPlacement: If enabled, makes tile placement way faster.
 			fasterJumpSpeed: If enabled, makes the player's jump speed faster.
 			fasterSpeed: If enabled, makes the player's base movement speed faster.
+			fasterFalling: If enabled, the player will fall faster if they press the down key.
+			recipeBrowser: "[WORK IN PROGRESS] If enabled, the Merchant shows you how to craft items."
 		}
 
-		ConfigHeaders.buffs: Base Stat Boosts
+		ConfigHeaders: {
+			qol: Quality of Life
+			buffs: Base Stat Boosts
+			features: New Features
+		}
 
 		Items: {
 			StarterBag: {

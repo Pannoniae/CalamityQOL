@@ -47,6 +47,21 @@ public class QOLPlayer : ModPlayer {
         if (QOLConfig.Instance.fasterJumpSpeed) {
             Player.jumpSpeedBoost += 0.2f;
         }
+
+        if (QOLConfig.Instance.fasterFalling) {
+            var isPressingDown = Player.controlDown && !Player.controlJump;
+            var isNotInmovable = !Player.CCed && !Player.tongued;
+            var isNotInWater = !Player.wet;
+            var isNotOnRope = !Player.pulley && Player.ropeCount == 0;
+            var isNotGrappling = Player.grappling[0] == -1;
+            var isFalling = Player.velocity.Y != 0.0;
+            if (isPressingDown && isNotInmovable && isNotInWater && isNotOnRope && isNotGrappling &&
+                 isFalling) {
+                Player.velocity.Y += Player.gravity * Player.gravDir * 1;
+                if (Player.velocity.Y * Player.gravDir > Player.maxFallSpeed)
+                    Player.velocity.Y = Player.maxFallSpeed * Player.gravDir;
+            }
+        }
     }
 
     public static bool isEvent(Player player) {

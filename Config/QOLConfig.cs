@@ -3,14 +3,14 @@ using Terraria.ModLoader.Config;
 
 namespace CalamityQOL.Config;
 
-[BackgroundColor(32, 2, 8, 4)]
+[BackgroundColor(64, 2, 32, 128)]
 public class QOLConfig : ModConfig {
     // magic tModLoader-managed field, assigned
     // ReSharper disable once UnusedMember.Global
     public static QOLConfig Instance;
     
     
-
+    [Header("$Mods.CalamityQOL.ConfigHeaders.qol")]
     [Label("$Mods.CalamityQOL.Config.sellAdditionalItems")]
     [BackgroundColor(192, 64, 128, 192)]
     [DefaultValue(true)]
@@ -94,6 +94,22 @@ public class QOLConfig : ModConfig {
     [DefaultValue(false)]
     [Tooltip("$Mods.CalamityQOL.ConfigTooltip.fasterSpeed")]
     public bool fasterSpeed { get; set; }
+    
+    // Lucky Horseshoe
+    [Label("$Mods.CalamityQOL.Config.fasterFalling")]
+    [BackgroundColor(192, 54, 128, 192)]
+    [DefaultValue(true)]
+    [Tooltip("$Mods.CalamityQOL.ConfigTooltip.fasterFalling")]
+    public bool fasterFalling { get; set; }
+    
+    [Header("$Mods.CalamityQOL.ConfigHeaders.features")]
+    // Anvil
+    [Label("$Mods.CalamityQOL.Config.recipeBrowser")]
+    [BackgroundColor(192, 54, 128, 192)]
+    [DefaultValue(false)]
+    [ReloadRequired]
+    [Tooltip("$Mods.CalamityQOL.ConfigTooltip.recipeBrowser")]
+    public bool recipeBrowser { get; set; }
 
     public override ConfigScope Mode => ConfigScope.ServerSide;
 }

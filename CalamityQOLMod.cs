@@ -1,6 +1,9 @@
 using CalamityQOL.Config;
 using CalamityQOL.Fixes;
+using Terraria;
+using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.UI;
 
 namespace CalamityQOL;
 
