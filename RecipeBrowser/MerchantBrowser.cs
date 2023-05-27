@@ -10,4 +10,12 @@ public class MerchantBrowser : GlobalNPC {
             // pass
         }
     }
+
+    public override void OnChatButtonClicked(NPC npc, bool firstButton) {
+        // Merchant Recipe button
+        if (npc.type == NPCID.Merchant && !firstButton) {
+            CalamityQOLMod.i.Logger.Info("Clicked on Merchant Recipe Browser");
+            ModContent.GetInstance<RecipeBrowserSystem>().showBrowser();
+        }
+    }
 }

@@ -1,2 +1,1 @@
-- Added alternate Leather recipe
-- Added hook for adding custom NPC buttons. This will be exposed to other modders properly soon, for now just call the QOLHooks.SetChatButtons.
+- Updated to latest preview

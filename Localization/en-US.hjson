@@ -1,4 +1,8 @@
 # This file will automatically update with entries for new content after a build and reload
+
+
+
+# TODO Actually refactor this
 Mods: {
 	CalamityQOL: {
 		Config: {
@@ -45,6 +49,82 @@ Mods: {
 			StarterBag: {
 				DisplayName: Starter Bag
 				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+		}
+
+		Configs: {
+			QOLConfig: {
+				DisplayName: CalamityQOL Config
+
+				sellAdditionalItems: {
+					Label: "{$Mods.CalamityQOL.Config.sellAdditionalItems}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.sellAdditionalItems}"
+				}
+
+				wellFedPatch: {
+					Label: "{$Mods.CalamityQOL.Config.wellFedPatch}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.wellFedPatch}"
+				}
+
+				respawnTimer: {
+					Label: "{$Mods.CalamityQOL.Config.respawnTimer}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.respawnTimer}"
+				}
+
+				starterBag: {
+					Label: "{$Mods.CalamityQOL.Config.starterBag}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.starterBag}"
+				}
+
+				accessoryRecipes: {
+					Label: "{$Mods.CalamityQOL.Config.accessoryRecipes}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.accessoryRecipes}"
+				}
+
+				townNPCsAtNight: {
+					Label: "{$Mods.CalamityQOL.Config.townNPCsAtNight}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.townNPCsAtNight}"
+				}
+
+				nonConsumableSummons: {
+					Label: "{$Mods.CalamityQOL.Config.nonConsumableSummons}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.nonConsumableSummons}"
+				}
+
+				moreAutoSwing: {
+					Label: "{$Mods.CalamityQOL.Config.moreAutoSwing}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.moreAutoSwing}"
+				}
+
+				moreBuffSlots: {
+					Label: "{$Mods.CalamityQOL.Config.moreBuffSlots}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.moreBuffSlots}"
+				}
+
+				fasterPlacement: {
+					Label: "{$Mods.CalamityQOL.Config.fasterPlacement}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.fasterPlacement}"
+				}
+
+				fasterJumpSpeed: {
+					Label: "{$Mods.CalamityQOL.Config.fasterJumpSpeed}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.fasterJumpSpeed}"
+				}
+
+				fasterSpeed: {
+					Label: "{$Mods.CalamityQOL.Config.fasterSpeed}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.fasterSpeed}"
+				}
+
+				fasterFalling: {
+					Label: "{$Mods.CalamityQOL.Config.fasterFalling}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.fasterFalling}"
+				}
+
+				recipeBrowser: {
+					Label: "{$Mods.CalamityQOL.Config.recipeBrowser}"
+					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.recipeBrowser}"
+				}
 			}
 		}
 	}
