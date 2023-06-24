@@ -50,11 +50,7 @@ public class RecipeChanges : ModSystem {
             new RecipeGroup(
                 () => Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.CobaltBar),
                 ItemID.CobaltBar, ItemID.PalladiumBar));
-        anyEvilPowder = RecipeGroup.RegisterGroup("EvilPowder", new RecipeGroup((Func<string>) (() => "Any Evil Powder"), new int[2]
-        {
-            ItemID.VilePowder,
-            ItemID.ViciousPowder
-        }));
+        anyEvilPowder = RecipeGroup.RegisterGroup("EvilPowder", new RecipeGroup((Func<string>) (() => "Any Evil Powder"), ItemID.VilePowder, ItemID.ViciousPowder));
     }
 
 
@@ -414,7 +410,7 @@ public class RecipeChanges : ModSystem {
         Recipe r66 = Recipe.Create(ItemID.Umbrella, 1);
         r66.AddIngredient(ItemID.Silk, 5);
         r66.AddRecipeGroup(anyCopperBar, 2);
-        r66.AddTile(86);
+        r66.AddTile(TileID.Loom);
         r66.Register();
         Recipe r67 = Recipe.Create(ItemID.BugNet, 1);
         r67.AddIngredient(ItemID.Cobweb, 30);
