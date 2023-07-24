@@ -76,10 +76,8 @@ public class ILEdits : ModSystem {
         if (QOLConfig.Instance.townNPCsAtNight) {
             IL_Main.UpdateTime += townNPCPatch;
         }
-
-        if (QOLConfig.Instance.recipeBrowser) {
-            IL_Main.GUIChatDrawInner += NPCButtonPatch;
-        }
+        
+        IL_Main.GUIChatDrawInner += NPCButtonPatch;
     }
 
     public static void unload() {
@@ -91,18 +89,9 @@ public class ILEdits : ModSystem {
 
 public class QOLHooks {
     private static void SetChatButtons(ref string button, ref string button2) {
-        SetChatButtons(Main.npc[Main.player[Main.myPlayer].talkNPC], ref button, ref button2);
-    }
-
-    public static void SetChatButtons(NPC npc, ref string button, ref string button2) {
+        //SetChatButtons(Main.npc[Main.player[Main.myPlayer].talkNPC], ref button, ref button2);
         
-        if (!QOLConfig.Instance.recipeBrowser) {
-            return;
-        }
-
-        if (npc.type == NPCID.Merchant) {
-            button2 = "Recipes";
-        }
+        // An empty method for now, we aren't using it
     }
-    
+
 }

@@ -101,15 +101,6 @@ public class QOLConfig : ModConfig {
     [DefaultValue(true)]
     [Tooltip("$Mods.CalamityQOL.ConfigTooltip.fasterFalling")]
     public bool fasterFalling { get; set; }
-    
-    [Header("$Mods.CalamityQOL.ConfigHeaders.features")]
-    // Anvil
-    [Label("$Mods.CalamityQOL.Config.recipeBrowser")]
-    [BackgroundColor(192, 54, 128, 192)]
-    [DefaultValue(false)]
-    [ReloadRequired]
-    [Tooltip("$Mods.CalamityQOL.ConfigTooltip.recipeBrowser")]
-    public bool recipeBrowser { get; set; }
 
     public override ConfigScope Mode => ConfigScope.ServerSide;
 }

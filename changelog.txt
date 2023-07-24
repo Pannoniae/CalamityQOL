@@ -1,1 +1,2 @@
-- Updated to latest preview! (Again.)
+- Removed unused recipe browser code
+- recompiled for latest tModLoader
