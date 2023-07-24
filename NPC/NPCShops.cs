@@ -15,8 +15,6 @@ public class NPCshop : GlobalNPC {
             cost *= 2;
         }
 
-        Recipe.FindRecipes();
-
         if (NPC.downedMoonlord) {
             cost *= 2;
         }
