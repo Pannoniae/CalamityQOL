@@ -1,2 +1,1 @@
-- Removed unused recipe browser code
-- recompiled for latest tModLoader
+- fix compatibility with Better Crafting Interface
