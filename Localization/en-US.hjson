@@ -13,7 +13,6 @@ Mods: {
 			accessoryRecipes: "[i:212] Additional Recipes"
 			townNPCsAtNight: "[i:4951] Spawn Town NPCs at Night"
 			nonConsumableSummons: "[i:43] Non-consumable Summons"
-			moreAutoSwing: "[i:211] More AutoSwing"
 			moreBuffSlots: "[i:292] More Buff Slots"
 			fasterPlacement: "[i:94] Faster Block Placement"
 			fasterJumpSpeed: "[i:2423] Faster Jump Speed"
@@ -30,7 +29,6 @@ Mods: {
 			accessoryRecipes: If enabled, makes certain accessories, weapons and materials craftable like in Calamity.
 			townNPCsAtNight: If enabled, Town NPCs can also spawn at night.
 			nonConsumableSummons: If enabled, makes boss summoning items non-consumable. (reusable)
-			moreAutoSwing: If enabled, gives more weapons the AutoSwing capability.
 			moreBuffSlots: Increases the number of buff slots by the value. Set to 0 to disable.
 			fasterPlacement: If enabled, makes tile placement way faster.
 			fasterJumpSpeed: If enabled, makes the player's jump speed faster.
@@ -53,8 +51,13 @@ Mods: {
 		}
 
 		Configs: {
-			QOLConfig: {
+			QoLConfig: {
 				DisplayName: CalamityQOL Config
+
+				Headers: {
+					gameplay: General Gameplay Changes
+					playerBoosts: Player Stat Boosts
+				}
 
 				sellAdditionalItems: {
 					Label: "{$Mods.CalamityQOL.Config.sellAdditionalItems}"
@@ -91,11 +94,6 @@ Mods: {
 					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.nonConsumableSummons}"
 				}
 
-				moreAutoSwing: {
-					Label: "{$Mods.CalamityQOL.Config.moreAutoSwing}"
-					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.moreAutoSwing}"
-				}
-
 				moreBuffSlots: {
 					Label: "{$Mods.CalamityQOL.Config.moreBuffSlots}"
 					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.moreBuffSlots}"
@@ -124,6 +122,53 @@ Mods: {
 				recipeBrowser: {
 					Label: "{$Mods.CalamityQOL.Config.recipeBrowser}"
 					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.recipeBrowser}"
+				}
+
+				FasterBaseSpeed: {
+					Label: "[i:HermesBoots] Increase Base Movement Speed"
+					Tooltip:
+						'''
+						Increases the player's base movement speed substantially by always giving them +50% movement speed.
+						This setting does nothing if the mod Terraria Overhaul is loaded.
+						Calamity is balanced around this setting being enabled.
+						'''
+				}
+
+				FasterFall: {
+					Label: "[i:Chain] Enable Fast Falling"
+					Tooltip:
+						'''
+						When enabled, you can hold the DOWN key while in the air to accelerate downwards faster.
+						This config does not increase your maximum falling speed, just how quickly you accelerate to it.
+						Calamity is balanced around this setting being enabled.
+						'''
+				}
+
+				FasterJumpSpeed: {
+					Label: "[i:FrogLeg] Increase Base Jump Speed"
+					Tooltip:
+						'''
+						Slightly increases the player's base jump speed.
+						Calamity is balanced around this setting being enabled.
+						'''
+				}
+
+				FasterTilePlacement: {
+					Label: "[i:ArchitectGizmoPack] Increase Base Building Speed"
+					Tooltip:
+						'''
+						Substantially increases how rapidly the player can place tiles and walls.
+						This config stacks with the Brick Layer, Portable Cement Mixer and other accessories.
+						'''
+				}
+
+				HigherJumpHeight: {
+					Label: "[i:ShinyRedBalloon] Increase Base Jump Height"
+					Tooltip:
+						'''
+						Increases the player's base jump height by 10% so that they can jump 7 tiles.
+						Calamity is balanced around this setting being enabled.
+						'''
 				}
 			}
 		}

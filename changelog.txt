@@ -1,1 +1,4 @@
-- fix compatibility with Better Crafting Interface
+ - Remove "More AutoSwing" (included in 1.4.4)
+ - Add all player boosts from latest Calamity
+ - Refactored the mod
+ - More coming soon!

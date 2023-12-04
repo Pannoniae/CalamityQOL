@@ -55,7 +55,7 @@ public class RecipeChanges : ModSystem {
 
 
     public override void AddRecipes() {
-        if (!QOLConfig.Instance.accessoryRecipes) {
+        if (!QoLConfig.Instance.accessoryRecipes) {
             return;
         }
 

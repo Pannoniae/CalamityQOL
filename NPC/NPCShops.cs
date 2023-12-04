@@ -202,7 +202,7 @@ public class NPCshop : GlobalNPC {
     /// <param name="description">The description to use for the condition.</param>
     private void addToShop(NPCShop shop, int itemID, int? price = null, Func<bool>? cond = null,
         LocalizedText? description = null) {
-        if (!QOLConfig.Instance.sellAdditionalItems) {
+        if (!QoLConfig.Instance.sellAdditionalItems) {
             return;
         }
 
@@ -220,7 +220,7 @@ public class NPCshop : GlobalNPC {
     }
 
     private void addToShop(NPCShop shop, int itemID, Condition cond, int? price = null) {
-        if (!QOLConfig.Instance.sellAdditionalItems) {
+        if (!QoLConfig.Instance.sellAdditionalItems) {
             return;
         }
 

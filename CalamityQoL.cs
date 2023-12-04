@@ -4,16 +4,21 @@ using Terraria.ModLoader;
 
 namespace CalamityQOL;
 
-public class CalamityQOLMod : Mod {
+public class CalamityQoL : Mod {
 
-    public static CalamityQOLMod i;
+    public static CalamityQoL i;
+
+    public Mod? vanillaQoL;
+    public Mod? overhaul;
 
     public override uint ExtraPlayerBuffSlots =>
-        (uint)QOLConfig.Instance.moreBuffSlots;
+        vanillaQoL is null ? (uint)QoLConfig.Instance.moreBuffSlots : 0;
 
     public override void Load() {
         i = this;
         ILEdits.load();
+        ModLoader.TryGetMod("VanillaQoL", out vanillaQoL);
+        ModLoader.TryGetMod("TerrariaOverhaul", out overhaul);
     }
 
     public override void Unload() {

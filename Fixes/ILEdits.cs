@@ -1,4 +1,5 @@
-﻿using CalamityQOL.Config;
+﻿using System;
+using CalamityQOL.Config;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using Terraria;
@@ -19,7 +20,7 @@ public class ILEdits : ModSystem {
             ilCursor.Emit(OpCodes.Or);
         }
         else {
-            CalamityQOLMod.i.Logger.Warn("Failed to locate Well Fed");
+            CalamityQoL.i.Logger.Warn("Failed to locate Well Fed");
         }
     }
 
@@ -40,10 +41,10 @@ public class ILEdits : ModSystem {
             ilCursor.Emit<Main>(OpCodes.Call, "UpdateTime_SpawnTownNPCs");
         }
         else {
-            CalamityQOLMod.i.Logger.Warn("Failed to locate daytime check (Main.eclipse)");
+            CalamityQoL.i.Logger.Warn("Failed to locate daytime check (Main.eclipse)");
         }
     }
-    
+
     //IL_14f7: ldloca.s     button
     //IL_14f9: ldloca.s     button2
     //IL_14fb: call         void Terraria.ModLoader.NPCLoader::SetChatButtons(string&, string&)
@@ -63,20 +64,44 @@ public class ILEdits : ModSystem {
             ilCursor.Emit<QOLHooks>(OpCodes.Call, "SetChatButtons");
         }
         else {
-            CalamityQOLMod.i.Logger.Warn("Failed to locate tModLoader SetChatButtons (in Main.GUIChatDrawInner)");
+            CalamityQoL.i.Logger.Warn("Failed to locate tModLoader SetChatButtons (in Main.GUIChatDrawInner)");
         }
     }
-    
+
+    private const float VanillaBaseJumpHeight = 5.01f;
+
+    private static void BaseJumpHeightAdjustment(ILContext il) {
+        // Increase the base jump height of the player to make early game less of a slog.
+        var cursor = new ILCursor(il);
+
+        // The jumpSpeed variable is set to this specific value before anything else occurs.
+        if (!cursor.TryGotoNext(MoveType.Before, i => i.MatchLdcR4(VanillaBaseJumpHeight))) {
+            CalamityQoL.i.Logger.Warn("[Base Jump Height Buff] Could not locate the jump height variable.");
+            return;
+        }
+
+        cursor.Remove();
+
+        // Increase by 10% if the higher jump speed is enabled.
+        cursor.EmitDelegate<Func<float>>(() =>
+            QoLConfig.Instance.HigherJumpHeight
+                ? 5.51f
+                : VanillaBaseJumpHeight);
+    }
+
 
     public static void load() {
-        if (QOLConfig.Instance.wellFedPatch) {
+        if (QoLConfig.Instance.wellFedPatch) {
             IL_Player.UpdateLifeRegen += wellFedPatch;
         }
 
-        if (QOLConfig.Instance.townNPCsAtNight) {
+        IL_Player.Update += BaseJumpHeightAdjustment;
+
+        // don't load if we have the better town NPC patch
+        if (QoLConfig.Instance.townNPCsAtNight && CalamityQoL.i.vanillaQoL is null) {
             IL_Main.UpdateTime += townNPCPatch;
         }
-        
+
         IL_Main.GUIChatDrawInner += NPCButtonPatch;
     }
 
@@ -84,14 +109,14 @@ public class ILEdits : ModSystem {
         IL_Player.UpdateLifeRegen -= wellFedPatch;
         IL_Main.UpdateTime -= townNPCPatch;
         IL_Main.GUIChatDrawInner -= NPCButtonPatch;
+        IL_Player.Update -= BaseJumpHeightAdjustment;
     }
 }
 
 public class QOLHooks {
     private static void SetChatButtons(ref string button, ref string button2) {
         //SetChatButtons(Main.npc[Main.player[Main.myPlayer].talkNPC], ref button, ref button2);
-        
+
         // An empty method for now, we aren't using it
     }
-
 }
