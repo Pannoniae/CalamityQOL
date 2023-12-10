@@ -1,13 +1,20 @@
 ﻿using System;
+using System.Linq;
 using CalamityQOL.Config;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityQOL;
+namespace CalamityQOL.NPC;
 
-public class NPCshop : GlobalNPC {
+public class NPCShops : GlobalNPC {
+
+    public override bool IsLoadingEnabled(Mod mod) {
+        // if calamity is loaded, we have zero business here
+        return CalamityQoL.i.calamity is null;
+    }
+
     public override void ModifyShop(NPCShop shop) {
         // 2 gold at start, 4 in hardmode and 8 post-ML
         int cost = 2;
@@ -15,7 +22,7 @@ public class NPCshop : GlobalNPC {
             cost *= 2;
         }
 
-        if (NPC.downedMoonlord) {
+        if (Terraria.NPC.downedMoonlord) {
             cost *= 2;
         }
 
@@ -36,7 +43,7 @@ public class NPCshop : GlobalNPC {
                 // haha funny
                 addToShop(shop, ItemID.MasterBait, Condition.DownedPlantera);
                 addToShop(shop, ItemID.Burger, Item.buyPrice(0, 5, 0, 0),
-                    () => NPC.downedBoss3);
+                    () => Terraria.NPC.downedBoss3);
 
                 addToShop(shop, ItemID.Hotdog, Condition.Hardmode,
                     Item.buyPrice(0, 5, 0, 0));
@@ -206,9 +213,11 @@ public class NPCshop : GlobalNPC {
             return;
         }
 
-        if (description == null) {
-            description = LocalizedText.Empty;
+        if (alreadyHasEntry(shop, itemID)) {
+            return;
         }
+
+        description ??= LocalizedText.Empty;
 
         // null means always true
         cond ??= () => true;
@@ -217,6 +226,10 @@ public class NPCshop : GlobalNPC {
             shopCustomPrice = price
         };
         shop.Add(shopItem, new Condition(description, cond));
+    }
+
+    private bool alreadyHasEntry(NPCShop shop, int item) {
+        return shop.Entries.Any(entry => entry.Item.type == item);
     }
 
     private void addToShop(NPCShop shop, int itemID, Condition cond, int? price = null) {

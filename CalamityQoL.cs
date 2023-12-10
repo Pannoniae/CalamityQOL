@@ -10,15 +10,23 @@ public class CalamityQoL : Mod {
 
     public Mod? vanillaQoL;
     public Mod? overhaul;
+    public Mod? calamity;
 
     public override uint ExtraPlayerBuffSlots =>
         vanillaQoL is null ? (uint)QoLConfig.Instance.moreBuffSlots : 0;
 
     public override void Load() {
         i = this;
-        ILEdits.load();
         ModLoader.TryGetMod("VanillaQoL", out vanillaQoL);
         ModLoader.TryGetMod("TerrariaOverhaul", out overhaul);
+        ModLoader.TryGetMod("CalamityMod", out calamity);
+
+        // if calamity is loaded, we have zero business here
+        if (calamity is not null) {
+            return;
+        }
+
+        ILEdits.load();
     }
 
     public override void Unload() {

@@ -9,6 +9,11 @@ using Terraria.ModLoader;
 namespace CalamityQOL.Fixes;
 
 public partial class QoLPlayer : ModPlayer {
+    public override bool IsLoadingEnabled(Mod mod) {
+        // if calamity is loaded, we have zero business here
+        return CalamityQoL.i.calamity is null;
+    }
+
     public override void UpdateDead() {
         if (!QoLConfig.Instance.respawnTimer) {
             return;

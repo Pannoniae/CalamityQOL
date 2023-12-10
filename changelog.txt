@@ -1,4 +1,2 @@
- - Remove "More AutoSwing" (included in 1.4.4)
- - Add all player boosts from latest Calamity
- - Refactored the mod
- - More coming soon!
+ - Disable most features when the actual Calamity is enabled.
+ - Update some of the NPC shop code to the latest version from my other mods.

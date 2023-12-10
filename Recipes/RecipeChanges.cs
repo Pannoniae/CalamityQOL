@@ -8,6 +8,12 @@ using Terraria.ModLoader;
 namespace CalamityQOL.Recipes;
 
 public class RecipeChanges : ModSystem {
+
+    public override bool IsLoadingEnabled(Mod mod) {
+        // if calamity is loaded, we have zero business here
+        return CalamityQoL.i.calamity is null;
+    }
+
     private int anyCopperBar;
     private int anySilverBar;
     private int anyGoldBar;
