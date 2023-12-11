@@ -33,4 +33,9 @@ public class CalamityQoL : Mod {
         ILEdits.unload();
         i = null!;
     }
+
+    // use at load time
+    public static bool hasCalamity() {
+        return ModLoader.HasMod("CalamityMod");
+    }
 }

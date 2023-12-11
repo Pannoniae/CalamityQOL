@@ -9,7 +9,7 @@ public class QOLItem : GlobalItem {
 
     public override bool IsLoadingEnabled(Mod mod) {
         // if calamity is loaded, we have zero business here
-        return CalamityQoL.i.calamity is null;
+        return !CalamityQoL.hasCalamity();
     }
     public override void SetDefaults(Item item) {
         if (QoLConfig.Instance.nonConsumableSummons &&

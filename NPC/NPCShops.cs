@@ -12,7 +12,7 @@ public class NPCShops : GlobalNPC {
 
     public override bool IsLoadingEnabled(Mod mod) {
         // if calamity is loaded, we have zero business here
-        return CalamityQoL.i.calamity is null;
+        return !CalamityQoL.hasCalamity();;
     }
 
     public override void ModifyShop(NPCShop shop) {

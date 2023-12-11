@@ -11,7 +11,7 @@ public class RecipeChanges : ModSystem {
 
     public override bool IsLoadingEnabled(Mod mod) {
         // if calamity is loaded, we have zero business here
-        return CalamityQoL.i.calamity is null;
+        return !CalamityQoL.hasCalamity();;
     }
 
     private int anyCopperBar;
