@@ -75,8 +75,8 @@ Mods: {
 				}
 
 				starterBag: {
-					Label: "{$Mods.CalamityQOL.Config.starterBag}"
-					Tooltip: "{$Mods.CalamityQOL.ConfigTooltip.starterBag}"
+					Label: "[i:CalamityQOL/StarterBag] Starter Bag"
+					Tooltip: If enabled, gives players some starting items.
 				}
 
 				accessoryRecipes: {

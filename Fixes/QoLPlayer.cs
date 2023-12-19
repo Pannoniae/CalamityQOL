@@ -11,7 +11,7 @@ namespace CalamityQOL.Fixes;
 public class QoLPlayer : ModPlayer {
     public override bool IsLoadingEnabled(Mod mod) {
         // if calamity is loaded, we have zero business here
-        return !CalamityQoL.hasCalamity();
+        return !CalamityQOL.hasCalamity();
     }
 
     public override void UpdateDead() {
@@ -50,7 +50,7 @@ public class QoLPlayer : ModPlayer {
     public override void PostUpdateMiscEffects() {
         // 50% movement speed bonus so that you don't feel like a snail in the early game
         // Disabled while Overhaul is enabled, because Overhaul does very similar things to make movement more snappy
-        if (CalamityQoL.i.overhaul is null && QoLConfig.Instance.FasterBaseSpeed) {
+        if (CalamityQOL.i.overhaul is null && QoLConfig.Instance.FasterBaseSpeed) {
             Player.moveSpeed += 0.5f;
         }
 

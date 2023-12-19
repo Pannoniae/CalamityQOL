@@ -81,5 +81,8 @@ public class QoLConfig : ModConfig {
         if (sellAdditionalItems) {
             GlobalFeatures.enableFeature(Mod, "NPCShops");
         }
+        else {
+        	GlobalFeatures.disableFeature(Mod, "NPCShops");
+        }
     }
 }

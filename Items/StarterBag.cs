@@ -22,11 +22,6 @@ public class HasTinOreGenDropRuleCondition : IItemDropRuleCondition {
 }
 
 public class StarterBag : ModItem {
-
-    public override bool IsLoadingEnabled(Mod mod) {
-        // if calamity is loaded, we have zero business here
-        return !CalamityQoL.hasCalamity();
-    }
     public override void SetDefaults() {
         Item.consumable = true;
         Item.width = 24;

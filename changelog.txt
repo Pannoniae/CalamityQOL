@@ -1,1 +1,1 @@
- - Moved the NPC shop code to VanillaQoL for updatability reasons.
+ - Fix config icon

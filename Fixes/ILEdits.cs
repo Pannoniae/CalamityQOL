@@ -3,24 +3,19 @@ using CalamityQOL.Config;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CalamityQOL.Fixes;
 
 public class ILEdits : ModSystem {
     private static void wellFedPatch(ILContext il) {
-        int bullshitVariable;
         var ilCursor = new ILCursor(il);
-        if (ilCursor.TryGotoNext(MoveType.After, i => {
-                bullshitVariable = 0;
-                return i.MatchLdfld<Player>("wellFed");
-            })) {
+        if (ilCursor.TryGotoNext(MoveType.After, i => i.MatchLdfld<Player>("wellFed"))) {
             ilCursor.Emit(OpCodes.Ldc_I4_1);
             ilCursor.Emit(OpCodes.Or);
         }
         else {
-            CalamityQoL.i.Logger.Warn("Failed to locate Well Fed");
+            CalamityQOL.i.Logger.Warn("Failed to locate Well Fed");
         }
     }
 
@@ -31,17 +26,13 @@ public class ILEdits : ModSystem {
     //IL_0690: stsfld       bool Terraria.Main::eclipse
     private static void townNPCPatch(ILContext il) {
         // so after the !Main.daytime check, we call UpdateTime_SpawnTownNPCs() anyway
-        int bullshitVariable;
         var ilCursor = new ILCursor(il);
-        if (ilCursor.TryGotoNext(MoveType.After, i => {
-                bullshitVariable = 0;
-                return i.MatchStsfld<Main>("eclipse");
-            })) {
+        if (ilCursor.TryGotoNext(MoveType.After, i => i.MatchStsfld<Main>("eclipse"))) {
             // call         void Terraria.Main::UpdateTime_SpawnTownNPCs()
             ilCursor.Emit<Main>(OpCodes.Call, "UpdateTime_SpawnTownNPCs");
         }
         else {
-            CalamityQoL.i.Logger.Warn("Failed to locate daytime check (Main.eclipse)");
+            CalamityQOL.i.Logger.Warn("Failed to locate daytime check (Main.eclipse)");
         }
     }
 
@@ -52,19 +43,15 @@ public class ILEdits : ModSystem {
         // local indexes for the two buttons
         int button1idx = 11;
         int button2idx = 12;
-        int bullshitVariable;
         var ilCursor = new ILCursor(il);
-        if (ilCursor.TryGotoNext(MoveType.After, i => {
-                bullshitVariable = 0;
-                return i.MatchCall(typeof(NPCLoader), "SetChatButtons");
-            })) {
+        if (ilCursor.TryGotoNext(MoveType.After, i => i.MatchCall(typeof(NPCLoader), "SetChatButtons"))) {
             // call         void Terraria.Main::UpdateTime_SpawnTownNPCs()
             ilCursor.Emit(OpCodes.Ldloca, button1idx);
             ilCursor.Emit(OpCodes.Ldloca, button2idx);
             ilCursor.Emit<QOLHooks>(OpCodes.Call, "SetChatButtons");
         }
         else {
-            CalamityQoL.i.Logger.Warn("Failed to locate tModLoader SetChatButtons (in Main.GUIChatDrawInner)");
+            CalamityQOL.i.Logger.Warn("Failed to locate tModLoader SetChatButtons (in Main.GUIChatDrawInner)");
         }
     }
 
@@ -76,7 +63,7 @@ public class ILEdits : ModSystem {
 
         // The jumpSpeed variable is set to this specific value before anything else occurs.
         if (!cursor.TryGotoNext(MoveType.Before, i => i.MatchLdcR4(VanillaBaseJumpHeight))) {
-            CalamityQoL.i.Logger.Warn("[Base Jump Height Buff] Could not locate the jump height variable.");
+            CalamityQOL.i.Logger.Warn("[Base Jump Height Buff] Could not locate the jump height variable.");
             return;
         }
 
@@ -98,7 +85,7 @@ public class ILEdits : ModSystem {
         IL_Player.Update += BaseJumpHeightAdjustment;
 
         // don't load if we have the better town NPC patch
-        if (QoLConfig.Instance.townNPCsAtNight && CalamityQoL.i.vanillaQoL is null) {
+        if (QoLConfig.Instance.townNPCsAtNight && CalamityQOL.i.vanillaQoL is null) {
             IL_Main.UpdateTime += townNPCPatch;
         }
 

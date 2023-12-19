@@ -1,12 +1,14 @@
 using CalamityQOL.Config;
 using CalamityQOL.Fixes;
+using CalamityQOL.Recipes;
 using Terraria.ModLoader;
+using VanillaQoL;
 
 namespace CalamityQOL;
 
-public class CalamityQoL : Mod {
+public class CalamityQOL : Mod {
 
-    public static CalamityQoL i;
+    public static CalamityQOL i;
 
     public Mod? vanillaQoL;
     public Mod? overhaul;
@@ -32,6 +34,9 @@ public class CalamityQoL : Mod {
     public override void Unload() {
         ILEdits.unload();
         i = null!;
+
+        Utils.completelyWipeClass(typeof(ILEdits));
+        Utils.completelyWipeClass(typeof(RecipeChanges));
     }
 
     // use at load time

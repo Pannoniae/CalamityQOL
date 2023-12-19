@@ -11,7 +11,7 @@ public class RecipeChanges : ModSystem {
 
     public override bool IsLoadingEnabled(Mod mod) {
         // if calamity is loaded, we have zero business here
-        return !CalamityQoL.hasCalamity();;
+        return !CalamityQOL.hasCalamity();;
     }
 
     private int anyCopperBar;
@@ -24,32 +24,19 @@ public class RecipeChanges : ModSystem {
     public override void AddRecipeGroups() {
         // Sorry, this is needed so the compiler doesn't create a static class from the lambdas
         // which then never gets unloaded.
-        int bullshitVariable;
         anyCopperBar = RecipeGroup.RegisterGroup("AnyCopperBar",
             new RecipeGroup(
-                () => {
-                    bullshitVariable = 0;
-                    return Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.CopperBar);
-                },
+                () => Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.CopperBar),
                 ItemID.CopperBar, ItemID.TinBar));
         anySilverBar = RecipeGroup.RegisterGroup("AnySilverBar",
             new RecipeGroup(
-                () => {
-                    bullshitVariable = 0;
-                    return Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.SilverBar);
-                },
+                () => Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.SilverBar),
                 ItemID.SilverBar, ItemID.TungstenBar));
         anyGoldBar = RecipeGroup.RegisterGroup("AnyGoldBar",
-            new RecipeGroup(() => {
-                    bullshitVariable = 0;
-                    return Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.GoldBar);
-                },
+            new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.GoldBar),
                 ItemID.GoldBar, ItemID.PlatinumBar));
         anyIceBlock = RecipeGroup.RegisterGroup("AnyIceBlock",
-            new RecipeGroup(() => {
-                    bullshitVariable = 0;
-                    return Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.IceBlock);
-                },
+            new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.IceBlock),
                 ItemID.IceBlock, ItemID.PurpleIceBlock,
                 ItemID.PinkIceBlock, ItemID.RedIceBlock));
         anyCobaltBar = RecipeGroup.RegisterGroup("AnyCobaltBar",
