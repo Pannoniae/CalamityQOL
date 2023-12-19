@@ -1,2 +1,1 @@
- - Disable most features when the actual Calamity is enabled.
- - Update some of the NPC shop code to the latest version from my other mods.
+ - Moved the NPC shop code to VanillaQoL for updatability reasons.

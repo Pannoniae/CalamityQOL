@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using Terraria.ModLoader.Config;
+using VanillaQoL.Shared;
 
 namespace CalamityQOL.Config;
 
@@ -74,4 +75,10 @@ public class QoLConfig : ModConfig {
     public bool FasterTilePlacement { get; set; }
 
     public override ConfigScope Mode => ConfigScope.ServerSide;
+
+    public override void OnChanged() {
+        if (sellAdditionalItems) {
+            GlobalFeatures.enableFeature(Mod, "NPCShops");
+        }
+    }
 }

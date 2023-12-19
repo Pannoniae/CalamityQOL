@@ -15,6 +15,9 @@
     <Reference Include="CalamityMod">
       <HintPath>..\..\ModReader\CalamityMod\CalamityMod.dll</HintPath>
     </Reference>
+    <Reference Include="VanillaQoL">
+      <HintPath>..\VanillaQoL.dll</HintPath>
+    </Reference>
     <Reference Include="tModLoader">
       <HintPath>D:\games\steam\steamapps\common\tModLoader\tModLoader.dll</HintPath>
     </Reference>
