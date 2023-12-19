@@ -19,6 +19,7 @@ public class QoLConfig : ModConfig {
 
     [BackgroundColor(192, 64, 128, 192)]
     [DefaultValue(true)]
+    [ReloadRequired]
     public bool sellAdditionalItems { get; set; }
 
     [BackgroundColor(192, 64, 128, 192)]
