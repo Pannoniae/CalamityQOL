@@ -3,6 +3,7 @@ using CalamityQOL.Fixes;
 using CalamityQOL.Recipes;
 using Terraria.ModLoader;
 using VanillaQoL;
+using VanillaQoL.Gameplay;
 
 namespace CalamityQOL;
 
@@ -13,9 +14,6 @@ public class CalamityQOL : Mod {
     public Mod? vanillaQoL;
     public Mod? overhaul;
     public Mod? calamity;
-
-    public override uint ExtraPlayerBuffSlots =>
-        vanillaQoL is null ? (uint)QoLConfig.Instance.moreBuffSlots : 0;
 
     public override void Load() {
         i = this;

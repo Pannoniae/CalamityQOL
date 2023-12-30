@@ -41,21 +41,10 @@ public class QoLConfig : ModConfig {
     [DefaultValue(true)]
     public bool accessoryRecipes { get; set; }
 
-    // Universal Pylon
-    [BackgroundColor(192, 54, 128, 192)]
-    [DefaultValue(true)]
-    public bool townNPCsAtNight { get; set; }
-    
     // Suspicious Looking Eye
     [BackgroundColor(192, 54, 128, 192)]
     [DefaultValue(true)]
     public bool nonConsumableSummons { get; set; }
-    
-    // Ironskin Potion
-    [BackgroundColor(192, 54, 128, 192)]
-    [DefaultValue(44)]
-    [Range(0, 936)]
-    public int moreBuffSlots { get; set; }
     
     [Header("playerBoosts")]
 
@@ -83,6 +72,13 @@ public class QoLConfig : ModConfig {
         }
         else {
         	GlobalFeatures.disableFeature(Mod, "NPCShops");
+        }
+
+        if (nonConsumableSummons) {
+            GlobalFeatures.enableFeature(Mod, "nonConsumableSummons");
+        }
+        else {
+            GlobalFeatures.disableFeature(Mod, "nonConsumableSummons");
         }
     }
 }
