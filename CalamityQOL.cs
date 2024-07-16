@@ -1,9 +1,5 @@
-using CalamityQOL.Config;
 using CalamityQOL.Fixes;
-using CalamityQOL.Recipes;
 using Terraria.ModLoader;
-using VanillaQoL;
-using VanillaQoL.Gameplay;
 
 namespace CalamityQOL;
 
@@ -11,13 +7,11 @@ public class CalamityQOL : Mod {
 
     public static CalamityQOL i;
 
-    public Mod? vanillaQoL;
     public Mod? overhaul;
     public Mod? calamity;
 
     public override void Load() {
         i = this;
-        ModLoader.TryGetMod("VanillaQoL", out vanillaQoL);
         ModLoader.TryGetMod("TerrariaOverhaul", out overhaul);
         ModLoader.TryGetMod("CalamityMod", out calamity);
 
@@ -32,9 +26,6 @@ public class CalamityQOL : Mod {
     public override void Unload() {
         ILEdits.unload();
         i = null!;
-
-        Utils.completelyWipeClass(typeof(ILEdits));
-        Utils.completelyWipeClass(typeof(RecipeChanges));
     }
 
     // use at load time

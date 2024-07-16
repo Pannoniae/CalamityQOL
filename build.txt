@@ -1,5 +1,4 @@
 displayName = Calamity QOL for Vanilla
 author = Pannoniae
-version = 0.5.13
+version = 0.5.14
 includeSource = true
-modReferences = VanillaQoL

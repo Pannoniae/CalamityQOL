@@ -1,1 +1,1 @@
- - Fix config icon
+ - Removed VanillaQoL dependency because people didn't like it
